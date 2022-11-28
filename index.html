@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Open</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/icone-cafe-open.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/design.css">
+    <link rel="stylesheet" href="CSS/design-login.css">
+
+    <!-- JS -->
+    <script src="js/produtos.js" defer></script>
+    <script src="js/carrinho-system.js" defer></script>
+    <script src="js/login-verificar.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container_logo_site">
+            <img src="images/logo-cafeopen.png" alt="Img">
+        </div>
+
+        <nav class="navbar">
+            <p class="btn_navbar">
+                <a href="index.html">Home</a>
+                <a href="loja/loja.html">Produtos</a>
+                <a href="user-login/login.html" id="login_none_cod1">Login</a>
+            </p>
+            <a href="user-login/login-conta-user.html" class="icone_login">
+                <img src="images/icone-usuario-login.png" alt="Img">
+            </a>
+            <a href="loja/carrinho.html" class="icone_carrinho">
+                <img src="images/compras.png" alt="Img">
+            </a>
+        </nav>
+        
+    </header>
+    <main class="banner_site">
+        <h1>CAFÉ OPEN</h1>
+
+        <p>Sinta o cheiro e o sabor de um dos <br> melhores cafés do Brasil.</p>
+        <p class="btn_banner">
+            <a href="loja/loja.html">
+                Loja
+            </a>
+        </p>
+    </main>
+    <div class="container_mkt">
+
+        <div class="bloco_mkt">
+            <img src="images/vetor-graodecafe.png" alt="Img">
+            <p>
+                Nós produzimos <br> nosso próprio grão de <br> café em uma das <br> maiores plantações do <br> Brasil.
+            </p>
+        </div>
+
+        <div class="bloco_mkt">
+            <img src="images/vetor-xicaradecafe.png" alt="Img">
+            <p>
+                Sinta o aroma doce do nosso café junto com um pão francês.
+            </p>
+        </div>
+
+        <div class="bloco_mkt">
+            <img src="images/coffee-maker.png" alt="Img">
+            <p>
+                Maquinas de última geração para moer melhor nossos grãos.
+            </p>
+        </div>
+
+    </div>
+    <div class="container_img_grao">
+        <h1>
+            GRÃOS DE ÓTIMA QUALIDADE <br> FEITO EM NOSSAS <br> FAZENDAS.
+        </h1>
+    </div>
+    <div class="container_produtos">
+        <!-- Produtos do site -->
+    </div>
+    <footer>
+        <p class="btn_footer">
+            <a href="index.html">Home</a>
+        </p>
+        <p class="btn_footer">
+            <a href="loja/loja.html">Produtos</a>
+        </p>
+        <p class="btn_footer">
+            <a href="user-login/login.html" id="login_none_cod2">Login</a>
+        </p>
+        <div class="informacoes_empresa">
+            <p>
+                CNPJ:453.049.651/627-93 <br>
+                Contato: (11) 9 3242-5454 <br>
+                Localizado: Rua 00/Predio 00
+            </p>
+        </div>
+        <div class="enviar_pergunta_input">
+            <div class="container_enviar_pergunta_input">
+                <input type="text" class="enviar_pergunta_nome" placeholder="Nome">
+                <input type="email" class="enviar_pergunta_gmail" placeholder="Gmail">
+                <input type="text" class="campo_pergunta" placeholder="Sua mensagem">
+                <button type="submit" class="btn_enviar_pergunta">Enviar</button>
+            </div>
+        </div>
+        <p class="direitos_autorais">
+            &copy; 2022 - Café Open
+        </p>
+    </footer>
+    <script>
+        //Verificar se a conta está logada
+        let verific = localStorage.getItem('verificar_login')
+        let login_none_cod2 = document.querySelector('a#login_none_cod2')
+        if(verific == 'ContaCriada'){
+            login_none_cod2.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
